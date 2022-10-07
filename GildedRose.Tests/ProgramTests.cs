@@ -73,4 +73,22 @@ public class ProgramTests
         Assert.Equal(12, Qualityoutput);
 
     }
+
+     [Fact]
+    public void conjured_sellin_and_quality_after_1_updatequality(){
+
+        var program = new Program(){
+            Items = new List<Item>(){
+            new Item{Name = "conjured mana cake",SellIn = 10, Quality= 10}
+            }
+        };
+
+        program.UpdateQuality();
+        int SellInoutput = program.Items[0].SellIn;
+        int Qualityoutput = program.Items[0].Quality;
+
+        Assert.Equal(9,SellInoutput);
+        Assert.Equal(8,Qualityoutput);
+
+    }
 }
