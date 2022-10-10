@@ -12,12 +12,29 @@ public class ProgramTests
             }
         };
 
-        program.UpdateQuality();
+        program.UpdateQualityImproved();
         int SellInoutput = program.Items[0].SellIn;
         int Qualityoutput = program.Items[0].Quality;
 
         Assert.Equal(9,SellInoutput);
         Assert.Equal(9,Qualityoutput);
+
+    }
+    [Fact]
+    public void normalitem_sellin_and_quality_hit_bottom(){
+
+        var program = new Program(){
+            Items = new List<Item>(){
+            new Item{Name = "vest 2",SellIn = 0, Quality= 0}
+            }
+        };
+
+        program.UpdateQualityImproved();
+        int SellInoutput = program.Items[0].SellIn;
+        int Qualityoutput = program.Items[0].Quality;
+
+        Assert.Equal(-1,SellInoutput);
+        Assert.Equal(0,Qualityoutput);
 
     }
 
@@ -30,12 +47,29 @@ public class ProgramTests
             }
         };
 
-        program.UpdateQuality();
+        program.UpdateQualityImproved();
         int SellInoutput = program.Items[0].SellIn;
         int Qualityoutput = program.Items[0].Quality;
 
         Assert.Equal(9,SellInoutput);
         Assert.Equal(11,Qualityoutput);
+
+    }
+    [Fact]
+    public void cheeseitem_sellin_and_quality_after_50_updatequality(){
+
+        var program = new Program(){
+            Items = new List<Item>(){
+            new Item{Name = "Aged Brie",SellIn = -2, Quality= 50}
+            }
+        };
+
+        program.UpdateQualityImproved();
+        int SellInoutput = program.Items[0].SellIn;
+        int Qualityoutput = program.Items[0].Quality;
+
+        Assert.Equal(-3,SellInoutput);
+        Assert.Equal(50,Qualityoutput);
 
     }
 
@@ -44,16 +78,16 @@ public class ProgramTests
 
         var program = new Program(){
             Items = new List<Item>(){
-            new Item{Name = "Sulfuras, Hand of Ragnaros",SellIn = 10, Quality= 10}
+            new Item{Name = "Sulfuras, Hand of Ragnaros",SellIn = 10, Quality= 80}
             }
         };
 
-        program.UpdateQuality();
+        program.UpdateQualityImproved();
         int SellInoutput = program.Items[0].SellIn;
         int Qualityoutput = program.Items[0].Quality;
 
         Assert.Equal(10,SellInoutput);
-        Assert.Equal(10,Qualityoutput);
+        Assert.Equal(80,Qualityoutput);
 
     }
     [Fact]
@@ -65,7 +99,7 @@ public class ProgramTests
             }
         };
 
-        program.UpdateQuality();
+        program.UpdateQualityImproved();
         int SellInoutput = program.Items[0].SellIn;
         int Qualityoutput = program.Items[0].Quality;
 
@@ -81,7 +115,7 @@ public class ProgramTests
             }
         };
 
-        program.UpdateQuality();
+        program.UpdateQualityImproved();
         int SellInoutput = program.Items[0].SellIn;
         int Qualityoutput = program.Items[0].Quality;
 
@@ -97,24 +131,24 @@ public class ProgramTests
             }
         };
 
-        program.UpdateQuality();
+        program.UpdateQualityImproved();
         int SellInoutput = program.Items[0].SellIn;
         int Qualityoutput = program.Items[0].Quality;
 
         Assert.Equal(1, SellInoutput);
         Assert.Equal(23, Qualityoutput);
     }
-
+    
      [Fact]
     public void conjured_sellin_and_quality_after_1_updatequality(){
 
         var program = new Program(){
             Items = new List<Item>(){
-            new Item{Name = "conjured mana cake",SellIn = 10, Quality= 10}
+            new Item{Name = "Conjured mana cake",SellIn = 10, Quality= 10}
             }
         };
 
-        program.UpdateQuality();
+        program.UpdateQualityImproved();
         int SellInoutput = program.Items[0].SellIn;
         int Qualityoutput = program.Items[0].Quality;
 
@@ -122,4 +156,5 @@ public class ProgramTests
         Assert.Equal(8,Qualityoutput);
 
     }
+        
 }
