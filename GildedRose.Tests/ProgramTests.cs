@@ -12,7 +12,7 @@ public class ProgramTests
             }
         };
 
-        program.UpdateQualityImproved();
+        program.UpdateQuality();
         int SellInoutput = program.Items[0].SellIn;
         int Qualityoutput = program.Items[0].Quality;
 
@@ -29,7 +29,7 @@ public class ProgramTests
             }
         };
 
-        program.UpdateQualityImproved();
+        program.UpdateQuality();
         int SellInoutput = program.Items[0].SellIn;
         int Qualityoutput = program.Items[0].Quality;
 
@@ -47,7 +47,7 @@ public class ProgramTests
             }
         };
 
-        program.UpdateQualityImproved();
+        program.UpdateQuality();
         int SellInoutput = program.Items[0].SellIn;
         int Qualityoutput = program.Items[0].Quality;
 
@@ -64,7 +64,7 @@ public class ProgramTests
             }
         };
 
-        program.UpdateQualityImproved();
+        program.UpdateQuality();
         int SellInoutput = program.Items[0].SellIn;
         int Qualityoutput = program.Items[0].Quality;
 
@@ -82,7 +82,7 @@ public class ProgramTests
             }
         };
 
-        program.UpdateQualityImproved();
+        program.UpdateQuality();
         int SellInoutput = program.Items[0].SellIn;
         int Qualityoutput = program.Items[0].Quality;
 
@@ -99,7 +99,7 @@ public class ProgramTests
             }
         };
 
-        program.UpdateQualityImproved();
+        program.UpdateQuality();
         int SellInoutput = program.Items[0].SellIn;
         int Qualityoutput = program.Items[0].Quality;
 
@@ -115,7 +115,7 @@ public class ProgramTests
             }
         };
 
-        program.UpdateQualityImproved();
+        program.UpdateQuality();
         int SellInoutput = program.Items[0].SellIn;
         int Qualityoutput = program.Items[0].Quality;
 
@@ -131,7 +131,7 @@ public class ProgramTests
             }
         };
 
-        program.UpdateQualityImproved();
+        program.UpdateQuality();
         int SellInoutput = program.Items[0].SellIn;
         int Qualityoutput = program.Items[0].Quality;
 
@@ -148,7 +148,7 @@ public class ProgramTests
             }
         };
 
-        program.UpdateQualityImproved();
+        program.UpdateQuality();
         int SellInoutput = program.Items[0].SellIn;
         int Qualityoutput = program.Items[0].Quality;
 
